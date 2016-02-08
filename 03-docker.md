@@ -214,7 +214,7 @@ You should see output similar to the following:
         "apiVersion": "v1",
         "metadata": {
             "name": "guestbook",
-            "namespace": "user03-guestbook",
+            "namespace": "userXX-guestbook",
             "selfLink": "/api/v1/namespaces/user03-guestbook/services/guestbook",
             "uid": "53753dd4-ce75-11e5-af1f-02fba65f895d",
             "resourceVersion": "17790",
@@ -239,8 +239,8 @@ You should see output similar to the following:
                 "app": "guestbook",
                 "deploymentconfig": "guestbook"
             },
-            "portalIP": "172.30.36.202",
-            "clusterIP": "172.30.36.202",
+            "portalIP": "172.30.208.199",
+            "clusterIP": "172.30.208.199",
             "type": "ClusterIP",
             "sessionAffinity": "None"
         },
