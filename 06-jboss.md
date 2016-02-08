@@ -86,7 +86,7 @@ application in a previous lab. However, this time we are going to specify a
 source code repository to use by using the ~ modifier as shown in the following
 command:
 
-	$ oc new-app jboss-eap6-openshift~https://github.com/YOURUSER/openshift3mlbparks.git
+	$ oc new-app jboss-eap64-openshift~https://github.com/YOURUSER/openshift3mlbparks.git
 
 **Note:** Ensure that you use your repository URL if you want to see S2I and
 webhooks in action later.
