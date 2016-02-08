@@ -291,16 +291,16 @@ action, issue the following command:
 
 You should see the following output:
 
-  Name:			        guestbook
-  Namespace:		    user10-guestbook
-  Labels:			      app=guestbook
-  Selector:		      app=guestbook,deploymentconfig=guestbook
-  Type:			        ClusterIP
-  IP:			          172.30.105.161
-  Port:			        3000-tcp	3000/TCP
-  Endpoints:		    10.1.0.39:3000
-  Session Affinity:	None
-  No events.
+    Name:               guestbook
+    Namespace:          user10-guestbook
+    Labels:             app=guestbook
+    Selector:           app=guestbook,deploymentconfig=guestbook
+    Type:               ClusterIP
+    IP:                 172.30.105.161
+    Port:               3000-tcp      3000/TCP
+    Endpoints:          10.1.0.39:3000
+    Session Affinity:   None
+    No events.
 
 You may be wondering why only one end point is listed. That is because there is
 only one *guestbook* Pod running.  In the next lab, we will learn how to scale
