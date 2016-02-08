@@ -125,11 +125,11 @@ Since we have three Pods running right now, let's see what happens if we
 "accidentally" kill one. Run the *oc get pods* command again, and choose a Pod
 name. Then, do the following:
 
-    oc delete pod guestbook-1-a163w
+    $ oc delete pod guestbook-1-a163w
 
 Then, as fast as you can, do the following:
 
-    oc get pods
+    $ oc get pods
 
 Did you notice anything different? The names of the Pods are slightly changed.
 That's because OpenShift almost immediately detected that the current state (2
