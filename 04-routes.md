@@ -23,8 +23,8 @@ Now we need to get the Service name to expose:
 
 	$ oc get services
 
-    NAME        LABELS    SELECTOR                     IP(S)            PORT(S)
-    guestbook   <none>    deploymentconfig=guestbook   172.30.208.199   3000/TCP
+        NAME        CLUSTER_IP      EXTERNAL_IP    PORT(S)    SELECTOR                                   AGE
+        guestbook   172.30.208.199  <none>         3000/TCP   app=guestbook,deploymentconfig=guestbook   2h
 
 Once we know the Service name, creating a route is a simple one-command task:
 
