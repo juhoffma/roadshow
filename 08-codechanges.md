@@ -4,10 +4,10 @@
 
 OpenShift 3 supports receiving webhooks from remote code repositories when code
 changes, including from GitHub. When a notification is received, a new build
-will be triggered on OpenShift. This allows for automated pipeline of
+will be triggered on OpenShift. This allows for automated pipelines of
 code/build/deploy. 
 
-In the OpenShift web console, navigate to your *userXX-mlbparks* Project, and
+In the OpenShift web console, navigate to your *userXX-mlbparks* project, and
 then click *Browse* and then *Builds*.  On this screen you will see the option
 to copy the GitHub webhook URL as shown in the following image:
 
