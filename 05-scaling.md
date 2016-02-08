@@ -36,9 +36,10 @@ stand up the *guestbook* image:
 
     $ oc get rc
 
-    CONTROLLER    CONTAINER(S)   IMAGE(S)                      SELECTOR                                            REPLICAS
-    guestbook-1   guestbook      kubernetes/guestbook:latest   deployment=guestbook-1,deploymentconfig=guestbook   1
-
+    CONTROLLER    CONTAINER(S)   IMAGE(S)                                                                                       SELECTOR                                                          REPLICAS   AGE
+    guestbook-1   guestbook      kubernetes/guestbook@sha256:a49f4e18bb57c8e3e16e20a3d5b67cae9b5b70ae7b3d49ebd6005c262b9c5bd0   app=guestbook,deployment=guestbook-1,deploymentconfig=guestbook   1          2h
+    
+    
 Again, to get more details (once you know the name of RC), you can use the
 following command:
 
