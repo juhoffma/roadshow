@@ -262,6 +262,7 @@ Now you can view the detailed data for your pod with the following command:
 Under the *"metadata"* section you should see the following:
 
     "labels": {
+                "app": "guestbook",
                 "deployment": "guestbook-1",
                 "deploymentconfig": "guestbook"
             },
