@@ -85,7 +85,7 @@ will see something like the following:
 
 To see all the Projects you have access to, you can simply use *oc get*.
 
-        $ oc get projects
+	$ oc get projects
 
 You should see a list like the following:
 
