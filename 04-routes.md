@@ -16,7 +16,7 @@ expose the Service. First we want to verify that we don't already have any
 existing routes:
 
 	$ oc get routes
-    
+
     NAME      HOST/PORT   PATH      SERVICE   LABELS
 
 Now we need to get the Service name to expose:

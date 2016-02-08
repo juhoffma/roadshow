@@ -26,7 +26,7 @@ Let's look at the pods that were deployed as part of the *smoke* application in
 the *userXX-smoke* Project.
 
 	$ oc get pods
-    
+
 You should see output similar to the following:
 
     NAME            READY     REASON       RESTARTS   AGE
@@ -43,7 +43,7 @@ following syntax:
 **Note:** Make sure you use the correct Pod name from your output.
 
 	$  oc get pod smoke-1-32gkx -o json
-    
+
 You should see something like the following output (which is have truncated due
 to space considerations of this workshop manual):
 
@@ -64,7 +64,7 @@ to space considerations of this workshop manual):
                 "generatedby": "OpenShiftWebConsole",
                 "name": "smoke"
             },...............
-            
+
 ###** Exercise 1: Deploying your first Image **
 
 Let's start by doing the simplest thing possible - get a plain old Docker image
@@ -81,12 +81,12 @@ Remember that Projects group resources together. Ensure that you replace
 The *new-project* command will automatically switch you to use that Project. You
 will see something like the following:
 
-    Now using project "user36-guestbook" on server "https://openshift-master.chicago.openshift3roadshow.com:8443".
+    Now using project "user36-guestbook" on server "https://openshift-master.demo.openshift.me".
 
 To see all the Projects you have access to, you can simply use *oc get*.
 
         $ oc get projects
- 
+
 You should see a list like the following:
 
     NAME               DISPLAY NAME   STATUS
@@ -97,7 +97,7 @@ With the new Project created, in order to tell OpenShift to define and run the
 Docker image, you can simply execute the following command:
 
 	$ oc new-app kubernetes/guestbook
-    
+
 You will see output similar to the following:
 
     imagestreams/guestbook
@@ -115,9 +115,9 @@ already have it locally. You can check on the status of the image download and
 deployment by:
 
 1. Going into the web console
-1. Select Project *userXX-guestbook* 
+1. Select Project *userXX-guestbook*
 1. Select *Browse*
-1. Select *Pods* 
+1. Select *Pods*
 
 Under status you will see pending with the arrows circling (rather than
 running).
@@ -125,14 +125,14 @@ running).
 You can also use the *oc* command line tool and keep checking on the pod
 status:
 
-	$ oc get pods 
+	$ oc get pods
 
 	NAME                READY     REASON    RESTARTS   AGE
 	guestbook-1-xaav1   1/1       Running   0          1m
 
 Whenever OpenShift asks the node's Docker daemon to run an image, the Docker
 daemon will check to make sure it has the right "version" of the image to run.
-If it doesn't, it will pull it from the specified registry. 
+If it doesn't, it will pull it from the specified registry.
 
 There are a number of ways to customize this behavior. They are documented in
 [specifying an
@@ -191,12 +191,12 @@ deployed.  In order to view the Services defined in your Project, enter in the
 following command:
 
 	$ oc get services
-    
+
 You should see output similar to the following:
 
 	NAME        LABELS    SELECTOR                     IP(S)            PORT(S)
 	guestbook   <none>    deploymentconfig=guestbook   172.30.208.199   3000/TCP
-    
+
 In the above output, we can see that we have a Service named *guestbook* with an
 IP/Port combination of 172.30.208.199/3000. Your IP address may be different, as
 each Service receives a unique IP address upon creation. Service IPs never
@@ -206,7 +206,7 @@ You can also get more detailed information about a Service by using the
 following command to display the data in JSON:
 
 	$ oc get service guestbook -o json
-    
+
 You should see output similar to the following:
 
     {
@@ -249,7 +249,7 @@ wires components together.  For example, run the following command to get the
 name of your *guestbook* Pod:
 
 	$ oc get pods
-    
+
 You should see output similar to the following:
 
     NAME                READY     REASON    RESTARTS   AGE
@@ -258,7 +258,7 @@ You should see output similar to the following:
 Now you can view the detailed data for your pod with the following command:
 
 	$ oc get pod guestbook-1-xaav1 -o json
-    
+
 Under the *"metadata"* section you should see the following:
 
     "labels": {
@@ -267,25 +267,26 @@ Under the *"metadata"* section you should see the following:
             },
 
 * The Service has *selector* stanza that refers to "deploymentconfig=guestbook".
-* The Pod has multiple labels, one of which is "deploymentconfig=guestbook". 
+* The Pod has multiple labels, one of which is "deploymentconfig=guestbook".
 
 Labels are just key/value pairs. Any Pod in this Project that has a label that
 matches the *selector* will be associated with the Service. To see this in
 action, issue the following command:
 
 	$ oc describe service guestbook
-    
+
 You should see the following output:
 
-    Name:                   guestbook
-    Labels:                 <none>
-    Selector:               deploymentconfig=guestbook
-    Type:                   ClusterIP
-    IP:                     172.30.208.199
-    Port:                   guestbook-tcp-3000      3000/TCP
-    Endpoints:              10.1.1.74:3000
-    Session Affinity:       None
-    No events.
+  Name:			        guestbook
+  Namespace:		    user10-guestbook
+  Labels:			      app=guestbook
+  Selector:		      app=guestbook,deploymentconfig=guestbook
+  Type:			        ClusterIP
+  IP:			          172.30.105.161
+  Port:			        3000-tcp	3000/TCP
+  Endpoints:		    10.1.0.39:3000
+  Session Affinity:	None
+  No events.
 
 You may be wondering why only one end point is listed. That is because there is
 only one *guestbook* Pod running.  In the next lab, we will learn how to scale

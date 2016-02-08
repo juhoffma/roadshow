@@ -9,16 +9,13 @@ OpenShift 3 ships with a feature rich web console as well as command line tools 
 - Linux
 
 ####**Downloading the tools**
-During this lab, we are going to download the client tool and add them to our operating system $PATH environment variables so the executable is accessible from any directory on the command line. 
+During this lab, we are going to download the client tool and add them to our operating system $PATH environment variables so the executable is accessible from any directory on the command line.
 
-The first thing we want to do is download the correct executable for your operating system as linked below:
+The first thing we want to do is download the correct executable for your operating system from our download page:
 
-- [Microsoft Windows](http://repo.openshift3roadshow.com/clients/oc-3.0.1.0-windows.zip)
-- [Apple OS X](http://repo.openshift3roadshow.com/clients/oc-3.0.1.0-macosx.tar.gz)
-- [Linux](http://repo.openshift3roadshow.com/clients/oc-3.0.1.0-linux.tar.gz)
+- [access.redhat.com](https://access.redhat.com/downloads/content/290/ver=3.1/rhel---7/3.1.1.6/x86_64/product-software=)
 
-
-Once the file has been download, you will need to extract the contents as it is a compressed archive.  I would suggest saving this file to the following directories:
+Once you downloaded your file, you will need to extract the contents as it is a compressed archive.  I would suggest saving this file to the following directories:
 
 **Windows:**
 
@@ -67,11 +64,11 @@ Windows 10 - Follow the directions above.
 
 **OS X:**
 
-	$ export PATH=$PATH:~/OpenShift
+	$ export PATH=~/OpenShift:$PATH
 
 **Linux:**
-	
-	$ export PATH=$PATH:~/OpenShift
+
+	$ export PATH=~/OpenShift:$PATH
 
 
 ####**Verify**
@@ -81,8 +78,8 @@ At this point, we should have the oc tool available for use.  Let's test this ou
 
 You should see the following:
 
-    oc v3.0.1.0-503-g7cc6deb
-    kubernetes v1.0.0
+	oc v3.1.1.6
+	kubernetes v1.1.0-origin-1107-g4c8e6f4
 
 If you get an error message, you have not updated your path correctly.  If you need help, raise your hand and the instructor will assist.
 
