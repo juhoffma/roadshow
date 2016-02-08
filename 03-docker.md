@@ -100,11 +100,17 @@ Docker image, you can simply execute the following command:
 
 You will see output similar to the following:
 
-    imagestreams/guestbook
-    deploymentconfigs/guestbook
-    services/guestbook
-    Service "guestbook" created at 172.30.208.199 with port mappings 3000.
-    Run 'oc status' to view your app.
+	--> Found Docker image a49fe18 (16 months old) from Docker Hub for "kubernetes/guestbook"
+  	    * An image stream will be created as "guestbook:latest" that will track this image
+	    * This image will be deployed in deployment config "guestbook"
+  	    * [WARNING] Image "guestbook" runs as the 'root' user which may not be permitted by your cluster administrator
+	    * Port 3000/tcp will be load balanced by service "guestbook"
+	--> Creating resources with label app=guestbook ...
+	    ImageStream "guestbook" created
+	    DeploymentConfig "guestbook" created
+	    Service "guestbook" created
+	--> Success
+  	    Run 'oc status' to view your app.
 
 Pretty easy, huh?
 
