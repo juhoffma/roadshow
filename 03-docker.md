@@ -221,25 +221,32 @@ You should see output similar to the following:
         "metadata": {
             "name": "guestbook",
             "namespace": "userXX-guestbook",
-            "selfLink": "/api/v1/namespaces/userXX-guestbook/services/guestbook",
-            "uid": "65f22d41-36e3-11e5-8992-0a8636c3fd6f",
-            "resourceVersion": "177904",
-            "creationTimestamp": "2015-07-30T17:50:00Z"
+            "selfLink": "/api/v1/namespaces/user03-guestbook/services/guestbook",
+            "uid": "53753dd4-ce75-11e5-af1f-02fba65f895d",
+            "resourceVersion": "17790",
+            "creationTimestamp": "2016-02-08T15:05:01Z",
+            "labels": {
+                "app": "guestbook"
+            },
+            "annotations": {
+                "openshift.io/generated-by": "OpenShiftNewApp"
+            }
         },
         "spec": {
             "ports": [
                 {
-                    "name": "guestbook-tcp-3000",
+                    "name": "3000-tcp",
                     "protocol": "TCP",
                     "port": 3000,
-                    "targetPort": 3000,
-                    "nodePort": 0
+                    "targetPort": 3000
                 }
             ],
             "selector": {
+                "app": "guestbook",
                 "deploymentconfig": "guestbook"
             },
             "portalIP": "172.30.208.199",
+            "clusterIP": "172.30.208.199",
             "type": "ClusterIP",
             "sessionAffinity": "None"
         },
