@@ -12,4 +12,4 @@
 8. **[Using Source 2 Image for Code Changes](http://training.runcloudrun.com/roadshow/08-codechanges.md.html)**
 9. **[Using Application Templates](http://training.runcloudrun.com/roadshow/09-templates.md.html)**
 
-
+Appendix: [OpenShift Client Commands Used](http://training.runcloudrun.com/roadshow/10-appendix.md.html)
