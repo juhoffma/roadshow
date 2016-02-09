@@ -11,3 +11,5 @@
 7. **[Adding a Database (MongoDB)](http://juhoffma.github.io/roadshow/07-databases.md.html)**
 8. **[Using Source 2 Image for Code Changes](http://juhoffma.github.io/roadshow/08-codechanges.md.html)**
 9. **[Using Application Templates](http://juhoffma.github.io/roadshow/09-templates.md.html)**
+
+Appendix: [OpenShift Client Commands Used](http://juhoffma.github.io/roadshow/10-appendix.md.html)
