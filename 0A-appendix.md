@@ -21,7 +21,7 @@ $ oc login https://openshift-master.demo.openshift.me
 $ oc login https://openshift-master.demo.openshift.me --insecure-skip-tls-verify=true
 ```
 ```
-  $ oc project userXX-smoke
+$ oc project userXX-smoke
 ```
 ```
 $ oc get routes
@@ -50,15 +50,9 @@ $ oc get services
 $ oc get service guestbook -o json
 ```
 ```
-$ oc get pod guestbook-1-xaav1 -o json
-```
-```
 $ oc describe service guestbook
 ```
 ### Lab 4
-```
-$ oc get routes
-```
 ```
 $ oc expose service guestbook
 ```
@@ -120,4 +114,118 @@ $ oc exec -tip mongodb-24-rhel7-1-73af9  -- bash -c "mongo -u mlbparks -p mlbpar
 ```
 $ oc create -f https://raw.githubusercontent.com/gshipley/openshift3mlbparks/master/mlbparks-template.json
 ```
+
+
+## Commands in Alphabetical Order
+All commands used in the workshop - please use ```oc help <command>``` to get some basic information or check the [documentation](https://docs.openshift.com/enterprise/3.1/cli_reference/index.html).
+
+
+```
+$ oc build-logs openshift3mlbparks-1
+```
+
+```
+$ oc create -f https://raw.githubusercontent.com/gshipley/openshift3mlbparks/master/mlbparks-template.json
+```
+```
+$ oc delete pod guestbook-1-a163w
+```
+```
+$ oc describe service guestbook
+```
+```
+$ oc env dc openshift3mlbparks -e MONGODB_USER=mlbparks -e MONGODB_PASSWORD=mlbparks -e MONGODB_DATABASE=mlbparks
+```
+---
+Unix:
+
+```
+$ oc exec -tip mongodb-24-rhel7-1-73af9  -- bash -c 'mongo -u mlbparks -p mlbparks mlbparks'
+```
+
+Windows:
+
+```
+$ oc exec -tip mongodb-24-rhel7-1-73af9  -- bash -c "mongo -u mlbparks -p mlbparks mlbparks"
+```
+---
+
+```
+$ oc expose service guestbook
+```
+
+---
+
+```
+$ oc get builds
+```
+```
+$ oc get dc
+```
+```
+$ oc get dc openshift3mlbparks -o json
+```
+```
+$ oc get pod smoke-1-XYZXY -o json
+```
+```
+$ oc get pods
+```
+```
+$ oc get pods --watch
+```
+```
+$ oc get projects
+```
+```
+$ oc get rc
+```
+```
+$ oc get rc guestbook-1 -o json
+```
+```
+$ oc get rc guestbook-1 -o json | grep -B1 -E "replicas" | grep -v Docker
+```
+```
+$ oc get routes
+```
+```
+$ oc get services
+```
+```
+$ oc get service guestbook -o json
+```
+---
+```
+$ oc login https://openshift-master.demo.openshift.me
+```
+```
+$ oc login https://openshift-master.demo.openshift.me --insecure-skip-tls-verify=true
+```
+---
+```
+$ oc new-app kubernetes/guestbook
+```
+```
+$ oc new-app jboss-eap64-openshift~https://github.com/YOURUSER/openshift3mlbparks.git
+```
+```
+$ oc new-app mongodb -e MONGODB_USER=mlbparks -e MONGODB_PASSWORD=mlbparks -e MONGODB_DATABASE=mlbparks -e MONGODB_ADMIN_PASSWORD=mlbparks
+```
+---
+```
+$ oc new-project userXX-guestbook
+```
+```
+$ oc project userXX-smoke
+```
+```
+$ oc scale --replicas=3 rc guestbook-1
+```
+```
+$ oc version
+```
+
+
+
 
