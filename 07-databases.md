@@ -122,7 +122,7 @@ In short summary: By referring to environment variables to connect to services
 lifecycle environments on OpenShift without having to modify application code.
 
 You can learn more about environment variables in the [environment
-variables](https://docs.openshift.com/enterprise/3.0/dev_guide/environment_variables.html)
+variables](https://docs.openshift.com/enterprise/3.1/dev_guide/environment_variables.html)
 section of the Developer Guide.
 
 ###**Using the Mongo command line shell in the container **
@@ -145,7 +145,9 @@ Pod:
 
 **Note:** You will need to substitute the correct name for your MongoDB Pod.
 
-**Note:** For **Windows users**, you will need to use a double quote for the above command to work: oc exec -tip mongodb-24-rhel7-1-73af9  -- bash -c "mongo -u mlbparks -p mlbparks mlbparks"
+**Note:** For **Windows users**, you will need to use a double quote for the above command to work: 
+
+    oc exec -tip mongodb-24-rhel7-1-73af9  -- bash -c "mongo -u mlbparks -p mlbparks mlbparks"
 
 Once you are connected to the database, run the following command to count the number of MLB teams added to the database:
 

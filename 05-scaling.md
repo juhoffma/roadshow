@@ -12,7 +12,7 @@ how OpenShift "self heals".
 
 A DeploymentConfiguration (DC) defines how something in OpenShift should be
 deployed. From the [deployments
-documentation](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/deployments.html#deployments-and-deployment-configurations):
+documentation](https://docs.openshift.com/enterprise/3.1/architecture/core_concepts/deployments.html#deployments-and-deployment-configurations):
 
     Building on replication controllers, OpenShift adds expanded support for the
     software development and deployment lifecycle with the concept of deployments.
