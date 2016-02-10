@@ -122,7 +122,7 @@ In short summary: By referring to environment variables to connect to services
 lifecycle environments on OpenShift without having to modify application code.
 
 You can learn more about environment variables in the [environment
-variables](https://docs.openshift.com/enterprise/3.0/dev_guide/environment_variables.html)
+variables](https://docs.openshift.com/enterprise/3.1/dev_guide/environment_variables.html)
 section of the Developer Guide.
 
 ###**Using the Mongo command line shell in the container **
