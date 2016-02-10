@@ -33,7 +33,7 @@ it's magic.
 
 **Tip:** Red Hat provides a number of S2I-enabled runtimes with OpenShift, and
 you can find more about them in [the
-documentation](https://docs.openshift.com/enterprise/3.0/using_images/s2i_images/overview.html).
+documentation](https://docs.openshift.com/enterprise/3.1/using_images/s2i_images/overview.html).
 
 ####**Exercise 4: Creating a JBoss EAP application**
 

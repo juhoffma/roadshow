@@ -142,9 +142,9 @@ If it doesn't, it will pull it from the specified registry.
 
 There are a number of ways to customize this behavior. They are documented in
 [specifying an
-image](https://docs.openshift.com/enterprise/3.0/dev_guide/new_app.html#specifying-an-image)
+image](https://docs.openshift.com/enterprise/3.1/dev_guide/new_app.html#specifying-an-image)
 as well as [image pull
-policy](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/builds_and_image_streams.html#image-pull-policy).
+policy](https://docs.openshift.com/enterprise/3.1/architecture/core_concepts/builds_and_image_streams.html#image-pull-policy).
 
 WINNING! These few commands are the only ones you need to run to get a "vanilla"
 Docker image deployed on OpenShift 3. This should work with any Docker image
@@ -161,10 +161,10 @@ does not allow the deployment of Docker images that run as *root* by default.
 If you want or need to allow OpenShift users to deploy Docker images that do
 expect to run as root (or any specific user), a small configuration change is
 needed. You can learn more about the [Docker
-guidelines](https://docs.openshift.com/enterprise/3.0/creating_images/guidelines.html)
+guidelines](https://docs.openshift.com/enterprise/3.1/creating_images/guidelines.html)
 for OpenShift 3, or you can look at the section on [enabling images to run with
 a USER in the
-dockerfile](https://docs.openshift.com/enterprise/3.0/admin_guide/manage_scc.html#enable-images-to-run-with-user-in-the-dockerfile).
+dockerfile](https://docs.openshift.com/enterprise/3.1/admin_guide/manage_scc.html#enable-images-to-run-with-user-in-the-dockerfile).
 
 **Note:** The "new-app" command currently only creates a Service for the first
 EXPOSEd port in the Docker image.  If additional Services are required, you can
@@ -188,7 +188,7 @@ different except that the Service was now doing a better job handling the
 requests.
 
 There is a lot more information about
-[Services](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/pods_and_services.html#services),
+[Services](https://docs.openshift.com/enterprise/3.1/architecture/core_concepts/pods_and_services.html#services),
 including the JSON format to make one by hand, in the official documentation.
 
 Now that we understand the basics of what a Service is, let's take a look at the
